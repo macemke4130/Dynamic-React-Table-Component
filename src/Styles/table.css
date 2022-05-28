@@ -1,0 +1,134 @@
+.tableContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.tableContainer * {
+    box-sizing: border-box;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(240, 240, 240);
+}
+
+tr:nth-child(odd) {
+    background-color: white;
+}
+
+th, .featureTitle {
+    font-size: 1.1rem;
+    padding: 0.25rem;
+}
+
+td {
+    text-align: center;
+    font-size: 1rem;
+    padding: 0 0.25rem;
+}
+
+td:hover:not(.featureTitle, .noBorderShop) {
+    background-color: rgb(210, 210, 210);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    cursor: default;
+}
+
+th, td {
+    border: 1px solid black;
+}
+
+.noBorderTh {
+    border: none;
+    background-color: #979789;
+}
+
+.featureTitle {
+    font-weight: bold;
+    height: 2.5rem;
+}
+
+.shopButtonCell {
+    height: 3rem;
+}
+
+.shopNowTableButton {
+    display: block;
+    background-color: #ee2d25;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.25rem;
+}
+
+.noBorderImageCell {
+    border: none;
+    background-color: white;
+    padding: 0 1rem;
+}
+
+/* Mobile Rules - LM */
+@media (max-width: 1025px) {
+    th, td, .featureTitle, .shopNowTableButton {
+        font-size: 0.9rem;
+    }
+
+    .noBorderImageCell img {
+        object-fit: contain;
+    }
+
+    .tableContainer {
+        overflow-x: auto;
+        position: relative;
+    }
+       
+    table {
+        position: absolute;
+        border-collapse: separate;
+        left: 0;
+        top: 0;
+    }
+
+    th {
+        min-width: 7.5rem;
+    }
+
+    td {
+        border-top: 1px solid black;
+        border-right: 1px solid black;
+    }
+
+    .featureTitle, .noBorderTh {
+        position: sticky;
+        left: 0;
+        padding: 0;
+        box-shadow: 2px 0 0 #979789;
+    }
+
+    .featureTitle span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+        padding: 0 0.25rem;
+        width: 100%;
+        height: 100%;
+    }
+
+    tr:nth-child(even) .featureTitle {
+        background-color: rgb(240, 240, 240);
+    }
+
+    tr:nth-child(odd) .featureTitle {
+        background-color: white;
+    }
+}
+
+.highlight {
+    background-color: #fbff00;
+}
