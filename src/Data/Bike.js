@@ -1,5 +1,5 @@
 export const bikeData = {
-    title: "Fake Bike Company",
+    title: "Bicycles",
     products: [
         { // Start Product --
             title: "Model Y",

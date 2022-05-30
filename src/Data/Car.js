@@ -1,5 +1,5 @@
 export const carData = {
-    title: "Car",
+    title: "Automobiles",
     products: [
         { // Start Product --
             title: "Model A",
